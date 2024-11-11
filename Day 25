@@ -1,0 +1,51 @@
+import random
+
+def dice1(): # could add a parameter
+    
+    roll = random.randint(1, 1000) 
+    return roll
+    
+
+def dice2():
+  roll1 = random.randint(1,6) 
+  roll2 = random.randint(1,8)
+  roll = roll1 * roll2
+  return roll
+
+print("Character Generator")
+newCharacter = "yes"
+
+while newCharacter == "yes":
+  print()
+  input("Name Your Chacacter: ")
+  dice1()
+  
+  
+  characterHealth = dice2()
+  print("Character Health: ", characterHealth, "hp")
+  newCharacter = input("Want to make another character? ")
+
+
+Here is the example code: 
+import random
+
+def rollDice(sides):
+  result = random.randint(1,sides)
+  return result
+
+def roll_6_and_8():
+  roll_6_sided_dice = rollDice(6)
+  roll_8_sided_dice = rollDice(8)
+  health = roll_6_sided_dice * roll_8_sided_dice
+  return health
+
+print("⚔️Character stats generator⚔️")
+  
+
+haveACharacter = "yes"
+
+while haveACharacter == "yes":
+  character = input("Name your warrior: ")
+  health = str(roll_6_and_8())
+  print("Their health is ", health,"hp" ) 
+  haveACharacter = input("Want to create another character?")
